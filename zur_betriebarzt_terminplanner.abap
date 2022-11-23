@@ -1,0 +1,7 @@
+report zur_betriebarzt_terminplanner message-id zur_bt_message.
+
+include zur_betriebarzt_terminplanner_top.
+include zur_betriebarzt_terminplanner_cl.
+include zur_betriebarzt_terminplanner_pbo.
+include zur_betriebarzt_terminplanner_pai.
+include zur_betriebarzt_terminplanner_frm.
