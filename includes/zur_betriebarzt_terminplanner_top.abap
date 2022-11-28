@@ -23,3 +23,22 @@ data: gv_patient_name    type zur_betriebarzt_patient_name,
 data: gv_rad1 type xfeld,
       gv_rad2 type xfeld,
       gv_rad3 type xfeld.
+      
+      
+types: begin of gty_zur_betriebarzt_tb,
+         status          type icon_d,
+         patient_name    type zur_betriebarzt_patient_name,
+         patient_surname type zur_betriebarzt_patient_surname,
+         patient_email   type zur_betriebarzt_patient_email,
+         patient_phone   type zur_betriebarzt_patient_phone,
+         patient_purpose type zur_betriebarzt_patient_purpose,
+         app_date        type zur_betriebarzt_date,
+         doctor_name     type zur_betriebarzt_doctor_name,
+         app_time        type zur_betriebarzt_app_time,
+         insurence       type zur_betriebarzt_insurence,
+         insurence_num   type zur_betriebarzt_insurence_num,
+         insurence_kase  type zur_betriebarzt_insurence_kase,
+         cell_color      type lvc_t_scol,
+       end of gty_zur_betriebarzt_tb.
+
+data: gs_cell_color type lvc_s_scol. 
