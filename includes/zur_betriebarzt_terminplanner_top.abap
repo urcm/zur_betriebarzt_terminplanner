@@ -42,3 +42,12 @@ types: begin of gty_zur_betriebarzt_tb,
        end of gty_zur_betriebarzt_tb.
 
 data: gs_cell_color type lvc_s_scol. 
+
+data: gt_appointment    type table of gty_zur_betriebarzt_tb,
+      gs_appointment    type zur_betriebarzt_tb,
+      gs_appointment_ty type gty_zur_betriebarzt_tb.
+
+data: gt_transfer_raw type table of zur_betriebarzt_tb,
+      gs_transfer_raw type zur_betriebarzt_tb.
+
+data: go_salv type ref to cl_salv_table.
