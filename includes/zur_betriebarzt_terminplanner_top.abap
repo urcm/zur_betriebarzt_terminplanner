@@ -51,3 +51,13 @@ data: gt_transfer_raw type table of zur_betriebarzt_tb,
       gs_transfer_raw type zur_betriebarzt_tb.
 
 data: go_salv type ref to cl_salv_table.
+
+data: alv_alldata_container  type ref to cl_gui_custom_container,
+      alv_all_data grid      type ref to cl_gui_alv_grid.
+
+data: gt_fcat type lvc_t_fcat.
+
+data: go_db type ref to zur_betriebarzt_cl.
+
+
+
