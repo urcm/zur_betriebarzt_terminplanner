@@ -69,5 +69,16 @@ data: gv_time type char10.
 
 data : ls_ly type lvc_s_layo.
 
+types: begin of gty_zur_betriebarzt_transfer,
+         patient_name    type zur_betriebarzt_patient_name,
+         patient_surname type zur_betriebarzt_patient_surname,
+         insurence_num   type zur_betriebarzt_insurence_num,
+         transfer_to     type zur_betriebarzt_transferto,
+         diagnose        type zur_betriebarzt_diagnose,
+         create_date     type zur_betriebarzt_date,
+         arzt_nr         type zur_betriebarzt_dr_num,
+         status          type zur_betriebarzt_status,
+       end of gty_zur_betriebarzt_transfer.
+
 
 
