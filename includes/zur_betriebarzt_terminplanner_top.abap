@@ -60,4 +60,14 @@ data: gt_fcat type lvc_t_fcat.
 data: go_db type ref to zur_betriebarzt_cl.
 
 
+data: gt_today_appointment type table of gty_zur_betriebarzt_tb.
+
+data: alv_today_container type ref to cl_gui_custom_container,
+      alv_today_grid      type ref to cl_gui_alv_grid.
+
+data: gv_time type char10.
+
+data : ls_ly type lvc_s_layo.
+
+
 
