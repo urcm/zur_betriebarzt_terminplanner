@@ -41,33 +41,27 @@ types: begin of gty_zur_betriebarzt_tb,
          cell_color      type lvc_t_scol,
        end of gty_zur_betriebarzt_tb.
 
-data: gs_cell_color type lvc_s_scol. 
+data: gs_cell_color type lvc_s_scol,
+      gt_fcat type lvc_t_fcat,
+      ls_ly type lvc_s_layo,
+      gv_time type char10.
 
-data: gt_appointment    type table of gty_zur_betriebarzt_tb,
-      gs_appointment    type zur_betriebarzt_tb,
+data: gt_appointment    type table of gty_zur_betriebarzt_tb.
+data: gs_appointment    type zur_betriebarzt_tb,
       gs_appointment_ty type gty_zur_betriebarzt_tb.
 
 data: gt_transfer_raw type table of zur_betriebarzt_tb,
       gs_transfer_raw type zur_betriebarzt_tb.
 
-data: go_salv type ref to cl_salv_table.
+data: go_salv type ref to cl_salv_table,
+      go_db type ref to zur_betriebarzt_cl.
 
 data: alv_alldata_container  type ref to cl_gui_custom_container,
       alv_all_data grid      type ref to cl_gui_alv_grid.
 
-data: gt_fcat type lvc_t_fcat.
-
-data: go_db type ref to zur_betriebarzt_cl.
-
-
 data: gt_today_appointment type table of gty_zur_betriebarzt_tb.
-
-data: alv_today_container type ref to cl_gui_custom_container,
-      alv_today_grid      type ref to cl_gui_alv_grid.
-
-data: gv_time type char10.
-
-data : ls_ly type lvc_s_layo.
+data: alv_today_container  type ref to cl_gui_custom_container,
+      alv_today_grid       type ref to cl_gui_alv_grid.
 
 types: begin of gty_zur_betriebarzt_transfer,
          patient_name    type zur_betriebarzt_patient_name,
