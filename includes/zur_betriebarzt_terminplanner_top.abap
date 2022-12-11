@@ -43,6 +43,7 @@ types: begin of gty_zur_betriebarzt_tb,
 
 data: gs_cell_color type lvc_s_scol,
       gt_fcat type lvc_t_fcat,
+      gt_transfer_fcat type lvc_t_fcat.
       ls_ly type lvc_s_layo,
       gv_time type char10.
 
@@ -74,5 +75,18 @@ types: begin of gty_zur_betriebarzt_transfer,
          status          type zur_betriebarzt_status,
        end of gty_zur_betriebarzt_transfer.
 
+data: gt_transfer type table of gty_zur_betriebarzt_transfer,
+      gs_transfer type zur_betriebarzt_transfer.
+
+data: alv_transfer_container type ref to cl_gui_custom_container,
+      alv_transfer_grid type ref to cl_gui_alv_grid.
+
+class lcl_event_receiver definition deferred.
+data: event_receiver type ref to lcl_event_receiver.
+
+controls tb_id type tabstrip.
+
+start-of-selection.
+  call screen 0100.
 
 
