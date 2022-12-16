@@ -30,4 +30,12 @@ class lcl_event_receiver implementation.
     move 'Termine Löschen' to ls_toolbar-text.
     move ' ' to ls_toolbar-disabled.
     append ls_toolbar to e_object->mt_toolbar.
+    
+    clear ls_toolbar.
+    move '&TRANSFERTO' to ls_toolbar-function.
+    move icon_short_message to ls_toolbar-icon.
+    move 'Überwiesen' to ls_toolbar-quickinfo.
+    move 'Überwiesen' to ls_toolbar-text.
+    move ' ' to ls_toolbar-disabled.
+    append ls_toolbar to e_object->mt_toolbar.
   endmethod.
