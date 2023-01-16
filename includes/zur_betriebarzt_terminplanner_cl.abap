@@ -51,5 +51,17 @@ class lcl_event_receiver implementation.
         call method alv_grid->get_selected_rows
           importing
             et_index_rows = lt_rows.
-            
+
+        call method cl_gui_cfw=>flush.
+
+        if sy-subrc ne 0.
+          call function 'POPUP_TO_INFORM'
+            exporting
+              titel = sy-repid
+              txt2  = sy-subrc
+              txt1  = 'Error in Flush'.
+        else.
+          perform delete_apointment tables lt_rows.
+        endif.
+
   endmethod.  
