@@ -39,3 +39,17 @@ class lcl_event_receiver implementation.
     move ' ' to ls_toolbar-disabled.
     append ls_toolbar to e_object->mt_toolbar.
   endmethod.
+  
+  
+  method handle_user_command.
+
+    data: lt_rows type lvc_t_row.
+
+    case e_ucomm.
+      when '&DELETE_APPOINTMENT'.
+
+        call method alv_grid->get_selected_rows
+          importing
+            et_index_rows = lt_rows.
+            
+  endmethod.  
