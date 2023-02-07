@@ -69,6 +69,10 @@ class lcl_event_receiver implementation.
         call method alv_grid->get_selected_rows
           importing
             et_index_rows = lt_rows.
+            
+         call method cl_gui_cfw=>flush.
+
+        perform patient_transfer tables lt_rows.           
         
     endcase.
   endmethod.  
