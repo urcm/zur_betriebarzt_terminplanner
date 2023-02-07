@@ -63,5 +63,12 @@ class lcl_event_receiver implementation.
         else.
           perform delete_apointment tables lt_rows.
         endif.
+        
+      when '&TRANSFER'.
 
+        call method alv_grid->get_selected_rows
+          importing
+            et_index_rows = lt_rows.
+        
+    endcase.
   endmethod.  
