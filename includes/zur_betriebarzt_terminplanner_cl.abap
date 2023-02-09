@@ -72,7 +72,10 @@ class lcl_event_receiver implementation.
             
          call method cl_gui_cfw=>flush.
 
-        perform patient_transfer tables lt_rows.           
+        perform patient_transfer tables lt_rows.        
+       
+        call screen 0104 starting at 10 08
+                            ending at 100 30.
         
     endcase.
   endmethod.  
