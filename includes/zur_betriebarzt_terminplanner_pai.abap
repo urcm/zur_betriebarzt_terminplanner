@@ -13,7 +13,8 @@ module user_command_0100 input.
 case sy-ucomm.
     when '&BACK' or '&EXIT'.
       set screen 0.
-      
+    when '&TAB1'.
+      tb_id-activetab = '&TAB1'.      
 endcase.
 
 endmodule.
