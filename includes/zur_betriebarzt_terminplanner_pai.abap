@@ -10,4 +10,10 @@
 *----------------------------------------------------------------------*
 module user_command_0100 input.
 
+case sy-ucomm.
+    when '&BACK' or '&EXIT'.
+      set screen 0.
+      
+endcase.
+
 endmodule.
