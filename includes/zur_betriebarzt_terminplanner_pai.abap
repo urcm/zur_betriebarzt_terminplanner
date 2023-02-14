@@ -22,3 +22,16 @@ case sy-ucomm.
 endcase.
 
 endmodule.
+
+*&---------------------------------------------------------------------*
+*&      Module  USER_COMMAND_0101  INPUT
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+module user_command_0101 input.
+
+  case sy-ucomm.
+    when '&CLEAR'.
+      perform clear_field.
+  endcase.
+endmodule.
