@@ -33,5 +33,7 @@ module user_command_0101 input.
   case sy-ucomm.
     when '&CLEAR'.
       perform clear_field.
+    when '&SAVE'.
+      perform save_data.
   endcase.
 endmodule.
